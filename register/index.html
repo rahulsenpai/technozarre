@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J8JP75YL3T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J8JP75YL3T');
+</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/background.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Register - TECHNOZARRE 2K23</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  </head>
+  <body>
+    <div id="tiles"></div>
+    <div class="back"><a href="/"><img src="/assets/icons/back.svg"></a></div>
+    <div class="form-container">
+      <div class="heading"><span>REGISTRATION</span></div>
+      <form name="registration">
+        <input type="text" name="name" id="name" placeholder="Name*" required minlength="4" />
+        <input type="number" name="phone" id="phone" placeholder="Phone*" required />
+        <input type="email" name="email_id" id="email" placeholder="Email*" required />
+        <input type="text" name="college" id="college" placeholder="College*" required />
+        <input type="text" name="city" id="city" placeholder="City*" required />
+
+        <div class="field-wrapper">
+          <label>Gender*</label>
+          <div class="sub-field-wrapper">
+            <input
+              type="radio"
+              name="gender"
+              value="M"
+              id="gender-male"
+            /><label for="gender-male">Male</label>
+          </div>
+          <div class="sub-field-wrapper">
+            <input
+              type="radio"
+              name="gender"
+              value="F"
+              id="gender-female"
+            /><label for="gender-female">Female</label>
+          </div>
+          <div class="sub-field-wrapper">
+            <input
+              type="radio"
+              name="gender"
+              value="O"
+              id="gender-other"
+            /><label for="gender-other">Other</label>
+          </div>
+        </div>
+
+        <div class="field-wrapper">
+          <label>Year of Study*</label>
+          <div class="sub-field-wrapper" id='year-0-container' style="display: none;">
+            <input type="radio" name="year" value="0" id="year-0" /><label
+              for="year-0"
+              >0</label
+            >
+          </div>
+          <div class="sub-field-wrapper">
+            <input type="radio" name="year" value="1" id="year-1" /><label
+              for="year-1"
+              >1</label
+            >
+          </div>
+          <div class="sub-field-wrapper">
+            <input type="radio" name="year" value="2" id="year-2" /><label
+              for="year-2"
+              >2</label
+            >
+          </div>
+          <div class="sub-field-wrapper">
+            <input type="radio" name="year" value="3" id="year-3" /><label
+              for="year-3"
+              >3</label
+            >
+          </div>
+          <div class="sub-field-wrapper">
+            <input type="radio" name="year" value="4" id="year-4" /><label
+              for="year-4"
+              >4</label
+            >
+          </div>
+          <div class="field-wrapper">
+            <label><u>Terms and condition:- </u><br>Student must carry atleast 2 passport size photo with them. cloths shorter then knee length are not allowed,</label>
+          </div>  
+         
+        </div>
+        <div class="form-button-container">
+          <input type="button" value="Pay Now" onclick="window.location.href='https://forms.gle/4wxwEv86tCh8vWBr8'">
+          <input type="submit" value="REGISTER" id="register-button"/>
+          <input type="button" value="GO BACK" onclick="window.location.href='/'" />
+        </div>
+      </form>
+    </div>
+    <div class="message-box">
+      <img src="/assets/icons/close.svg" alt="close" onclick="closeMessage()" />
+      <div id="message"><!-- MESSAGES GOES HERE --></div>
+    </div>
+    <script src="/js/register.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#tiles",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x4c1284,
+        backgroundColor: 0x0,
+        points: 20.00,
+        maxDistance: 22.00,
+        spacing: 13.00
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J8JP75YL3T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J8JP75YL3T');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description"
+        content="The annual Technical festival of TIT&S Bhiwani, at TIT&S campus featuring participation from all over India." />
+    <meta name="keywords" content="technozarre, tits, tit-s, tit, tech, festival, fest, 2023, bhiwani" />
+    <meta name="author" content="SAS" />
+
+    <link rel="stylesheet" href="/css/player.css" />
+    <link rel="stylesheet" href="/css/loader.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/background.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/events.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link rel="stylesheet" href="/css/aboutUs.css" />
+    <link rel="stylesheet" href="/css/videos.css" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.png" type="image/x-icon" />
+    <title>TECHNOZARRE 2023 | Think, Explore, Inspire</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+</head>
+
+<body id="index">
+
+  <div id="tiles"></div>
+  <section class="loader" id="loader">
+        <div class="logo-container">
+            <div class="logo">
+              <img src="/assets/backgrounds/technozarre-loaderimg.png" alt="Technozarre Logo"/>
+            </div>
+            <div class="typewriter">
+                <div id="parent">
+                    <div id="child"></div>
+                    <div id="border"></div>
+                </div> </div>
+        </div>
+    </section>
+
+    <svg id="peaks" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#902ac8;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#3d25c7;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3d25c7;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#07135a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <path id="p11" d="M0 300L137 280L137 200L274 280L274 300L411 320L411 350L549 280L549 300L686 250L686 275L823 275L823 300L960 280L960 320L960 541L823 541L823 541L686 541L686 541L549 541L549 541L411 541L411 541L274 541L274 541L137 541L137 541L0 541Z" fill="url(#grad1)"></path>
+        <path id="p12" d="M0 370L137 360L137 390L274 340L274 400L411 380L411 330L549 350L549 370L686 390L686 375L823 340L823 380L960 330L960 370L960 541L823 541L823 541L686 541L686 541L549 541L549 541L411 541L411 541L274 541L274 541L137 541L137 541L0 541Z" fill="url(#grad2)"></path>
+        <path id="p13" d="M0 470L137 450L137 420L274 420L274 410L411 440L411 420L549 460L549 430L686 400L686 430L823 410L823 380L960 410L960 430L960 541L823 541L823 541L686 541L686 541L549 541L549 541L411 541L411 541L274 541L274 541L137 541L137 541L0 541Z" fill="#262699"></path>
+      </svg>
+
+    <!-- this element is visible when details button is pressed for an event -->
+    <div id="events-dialogue-container" class="events-dialogue-container">
+        <div class="events-dialogue-box" id="events-dialogue-box">
+            <div class="close_button_container">
+                <img src="/assets/icons/close.svg" class='close_svg' style="cursor: pointer" onclick="close_events()">
+            </div>
+            <div class="events-dialogue-text" id="events-dialogue-text">
+            </div>
+            <div class="app-link">Further Details Coming Soon</div>
+        </div>
+    </div>
+
+    <section class="backgrounds">
+        <div class="landing-background" id="mkc">
+        </div>
+    </section>
+    <div class="hamburger-menu">
+        <div id="hamburger-close-button" class="hamburger-icon close">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="ham-item" onclick="navigateTo('home')">Home</div>
+        <div class="ham-item" onclick="navigateTo('aboutUs')">About Us</div>
+        <div class="ham-item" onclick="navigateTo('videos')">Videos</div>
+        <div class="ham-item" onclick="navigateTo('events')">Events</div>
+        <div class="ham-item">
+          <a href="https://play.google.com/store/apps/details?id=ac.in.titsbhiwani.technozarre">Get The App</a>
+        </div>
+        <div class="ham-item">
+          <a href="/ca">CA Program</a>
+        </div>
+        <div class="ham-item">
+          <a href="/developers">Developers</a>
+        </div>
+        <div class="ham-item" onclick="navigateTo('contact')">Contact Us</div>
+        <style>
+          .ham-item a {
+              text-decoration: none;
+              font-family: inherit;
+              color: white;
+          }
+        </style>
+    </div>
+
+    <div class="wrapper" id="main">
+        <section class="home" id="home">
+            <div class="navbar" id="navbar">
+                <div class="nav-link-container">
+                    <div class="nav-links">
+                        <span><a onclick="navigateTo('home')">Home</a></span>
+                    </div>
+                    <div class="nav-links">
+                        <span><a onclick="navigateTo('aboutUs')">About Us</a></span>
+                    </div>
+                    <div class="nav-links">
+                        <span><a onclick="navigateTo('videos')">Videos</a></span>
+                    </div>
+                    <div class="nav-links">
+                        <span><a onclick="navigateTo('events')">Events</a></span>
+                    </div>
+                    <!--<div class="nav-links">
+                      <span><a href="sponsors">Sponsors</a></span>
+                  </div>-->
+                  <div class="nav-links">
+                    <span><a href="/ca">CA Program</a></span>
+                  </div>
+                    <div class="nav-links">
+                        <span><a onclick="navigateTo('contact')">Contact Us</a></span>
+                    </div>
+                    <div class="nav-links register-button" id="nav-register-button">
+                        <a href="/register" target="_blank">REGISTER</a>
+                    </div>
+                </div>
+                <div class="countdown"><span id="countdown"></span> TO GO</div>
+                <div class="hamburger-icon" id="hamburger-icon"> <div></div> <div></div> <div></div> </div>
+            </div>
+
+            <div class="intro">
+              <span class="big">The Technological Institute of Textile & Sciences</span>
+              <span class="small">PRESENTS</span>
+              <svg id="tz-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 170">
+                <text x="50%" y="80%" text-anchor="middle" font-family="Lora" letter-spacing="10px" stroke="#ffa5d8" font-size="10rem" font-weight="700" stroke-width="3" animation="textAnimate 5s infinite alternate">
+                  TECHNOZARRE
+                </text>
+              </svg>
+            </div>
+
+            <div class="footer">
+                <img src="/assets/backgrounds/nav-logo.png" class="nav-logo" />
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100091910354153" target="_blank">
+                        <span class="facebook icon"></span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=ac.in.titsbhiwani.technozarre" target="_blank">
+                      <span class="app icon"></span>
+                    </a>
+                    <a href="https://www.instagram.com/technozarre_2k23/" target="_blank">
+                        <span class="instagram icon"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/technozarre-tech-fest-7134b0273" target="_blank">
+                        <span class="linkedin icon"></span>
+                    </a>
+                    
+                </div>
+            </div>
+        </section>
+        <style>
+          #read-more-text {
+              display: none;
+          }
+          #read-more {
+              cursor: pointer;
+              color: #8bcfb1;
+          }
+        </style>
+
+        <section class="aboutUs" id="aboutUs">
+            <div class="heading">
+                <span>About Us</span>
+            </div>
+            <div class="body">
+                <p>
+                    Once again, TIT&S BHIWANI is hosting a Tech Fest, under the direction of the Birla Education Trust,
+                    the Institute was established in 1943 amid the haze of the Second World War as a result of the
+                    vision of the great businessman and visionary Padma Vibhushan Dr. Ghanshyam Das Birla.
+                    <span id="read-more" onclick='document.getElementById("read-more-text").style.display = "block"; document.getElementById("read-more").style.display = "none"'>Read More...</span>
+                </p>
+
+                <p id="read-more-text">
+                    All of the Institute's undergraduate and graduate programs are currently associated with Maharshi Dayanand University, Rohtak.
+                    TIT&S continues its journey well into the twenty-first century thanks to a robust and illustrious
+                    alumni network that spans business and academics around the globe, a committed and knowledgeable
+                    faculty offering top-notch instruction, frequent placements, and a committed administration and staff.
+                </p>
+            </div>
+        </section>
+
+        <section class="videos" id="videos">
+            <div class="heading">
+                <span>Videos</span>
+            </div>
+            <div class="body">
+                <div class="slideshow-container fade">
+                    <div class="Containers">
+                        <div class="MessageInfo">1 / 2</div>
+                        <video controls class="carousel-video" src="/assets/videos/teaser-1.mp4"></video>
+                    </div>
+                    <div class="Containers">
+                        <div class="MessageInfo">2 / 2</div>
+                        <video controls class="carousel-video" src="/assets/videos/teaser-2.mp4"></video>
+                    </div>
+
+                    <!-- Back and forward buttons -->
+                    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <script>
+                var slidePosition = 1;
+                SlideShow(slidePosition);
+
+                // forward/Back controls
+                function plusSlides(n) {
+                  SlideShow(slidePosition += n);
+
+                  var videoList = document.getElementsByTagName("video");
+                  for (var i = 0; i < videoList.length; i++) {
+                    videoList[i].pause();
+                  }
+                }
+
+                //  images controls
+                function currentSlide(n) {
+                  SlideShow(slidePosition = n);
+                }
+
+                function SlideShow(n) {
+                  var slides = document.getElementsByClassName("Containers");
+                  if (n > slides.length) {slidePosition = 1}
+                  if (n < 1) {slidePosition = slides.length}
+                  for (let i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  slides[slidePosition-1].style.display = "block";
+                }
+            </script>
+        </section>
+
+        <section class="events" id="events">
+            <div class="heading">
+                <span>Events</span>
+            </div>
+            <div class="body">
+                <div class="card">
+                    <div class="events-name">Formal Events</div>
+                    <div class="events-content">
+                        <img src="/assets/all-events/formal.jpg" alt="Formal Events Poster" />
+                        <span class="txt">
+                            <div class="events-details">
+                               <em>&ldquo;Good fortune is what happens when opportunity meets with planning.&rdquo;</em>
+                                <span class="quoteby">&#8212; Thomas Edison</span>
+                            </div>
+                            <div class="events-details-button-container">
+                                <div class="events-details-button" onclick="events_dialog({
+                    name: 'Formal Events',
+                    desc: `
+<span class='event-heading'>Formal Events</span>
+<div class='popup-events-list'>
+
+  <div class='popup-event'>
+    <span class='event-title'>Textile Exhibition</span>
+    <span class='event-venue'>TIT&S</span>
+    <!-- <span class='event-timings'>Timings TBA</span> -->
+    <span class='tooltip'>
+      Disclosing the textiles of this infamous campus for you to be awe-stricken by them.
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Electronics Exhibition</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Evince the electronic components of the technophile that will make you appalled upon seeing.
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>MUN</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      This is the simulation of an actual UN conference, where students are tasked with solving a global issue with your research.
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Board Meeting</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Present your  tactics  to the situation provided by the enable board members on the business information for the betterment of the society
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Debate</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Form an organized contest of ideas in which the participants discuss a topic from two opposing sides where topics will be delivered on the spot. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Press Release</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Paint an organization in a favorable light to its customers to enlighten your product where topics will be given and judged by the panel. 
+
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>PPT Competition</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Demonstrate the skills of your PowerPoint  to boast the corporate communications. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Bridge Making</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Show the proficiency of making a bridge with the provided random materials.
+    </span>
+  </div>
+</div>
+`
+                  })">
+                                    Details
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="events-name">Informal Events</div>
+                    <div class="events-content">
+                        <img src="/assets/all-events/informal.png" alt="Informal Events Poster" />
+                        <span class="txt">
+                            <div class="events-details">
+                                <em>&ldquo;An event is not over until everyone is tired of talking about it.&rdquo;</em>
+                                <span class="quoteby">&#8212; Mason Cooley</span>
+                            </div>
+                            <div class="events-details-button-container">
+                                <div class="events-details-button" onclick="events_dialog({
+                    name: 'Informal Events',
+                    desc: `
+<span class='event-heading'>Informal Events</span>
+<div class='popup-events-list'>
+  <div class='popup-event'>
+    <span class='event-title'>Digital Illustration</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Flaunt your skills of creating a narrative visual art using digital tools. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Anime Quiz</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Your love for anime will be proved by this quiz by testing how much you know about the anime 
+      world and their characters.
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Treasure Hunt</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Players have to search for hidden objects by following a trail of clues that is well hidden in the campus.
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Handicrafts</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Exhibit your artisanal skills by displaying things made from hands in traditional way. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Photography Competition</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Flex your photographs of any type to be loved by people. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Pun War</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Engage in word play that exploits multiple meanings of a term, or of similar-sounding words in a humorous way. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Human Ludo</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      play just like the board ludo with a twist where tokens are replaced by humans.
+    </span>
+  </div>
+</div>
+`
+                  })">
+                                    Details
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="events-name">Technical Events</div>
+                    <div class="events-content">
+                        <img src="/assets/all-events/technical.webp" alt="Technical Events Poster" />
+                        <span class="txt">
+                            <div class="events-details">
+                                <em>&ldquo;is only when they go wrong that machines remind you how powerful they are.&rdquo;</em>
+                                <span class="quoteby">&#8212; Clive James</span>
+                            </div>
+                            <div class="events-details-button-container">
+                                <div class="events-details-button" onclick="events_dialog({
+                    name: 'Technical Events',
+                    desc: `
+<span class='event-heading'>Technical Events</span>
+<div class='popup-events-list'>
+  <div class='popup-event'>
+    <span class='event-title'>Hackathon</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Develop your software problem solving grasp by presenting your ideas in a group and work together to make it creatively possible to be reviewed that will be apprehended by the judges. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Robo War</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Show case you combat skills in robot fight  in which you have to pin down or destroy the opponent robot. 
+
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Tech Quiz</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Make a show of technical stuff with your understanding of technical subjects. 
+
+
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>AutoCAD</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Make or edit digital 2D and 3D designs to be grandstand among the other competitors.
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Code War</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Egg on your inner geek to participate in the coding war of different languages. 
+
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Masala Allocation</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Pitch your business ideas in front of a panel of investors to invest in the form of appreciation in your business model. 
+
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Online & Offline Gaming</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Pitch your business ideas in front of a panel of investors to invest in the form of appreciation in your business model. 
+
+    </span>
+  </div>
+</div>
+`
+                  })">
+                                    Details
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="events-name">Cultural Events</div>
+                    <div class="events-content">
+                        <img src="/assets/all-events/cultural.webp" alt="Cultural Events Poster" />
+                        <span class="txt">
+                            <div class="events-details">
+                                <em>&ldquo;Culture is the arts elevated to a set of beliefs.&rdquo;</em>
+                                <span class="quoteby">&#8212; Thomas Wolfe</span>
+                            </div>
+                            <div class="events-details-button-container">
+                                <div class="events-details-button" onclick="events_dialog({
+                    name: 'Cultural Events',
+                    desc: `
+<span class='event-heading'>Cultural Events</span>
+<div class='popup-events-list'>
+  <div class='popup-event'>
+    <span class='event-title'>DJ Night</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Escort yourself to draw your breath, kick off your shoes, and do crazy dance.
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Fashion Show</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Bring out your inner fashionista and boast your aesthetic outfits. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Cultural Night</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      FunEvent where all of you express themselves, build confidence, and develop social skills. 
+    </span>
+  </div>
+
+  <div class='popup-event'>
+    <span class='event-title'>Open Mic</span>
+    <span class='event-venue'>TIT&S</span>
+    <!--<span class='event-timings'>Timings TBA</span>-->
+    <span class='tooltip'>
+      Invite yourself to show case your talent in an open night.
+    </span>
+  </div>
+</div>
+`
+                  })">
+                                    Details
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="heading">
+                <span>Contact Us</span>
+            </div>
+            <div class="contact-body"></div>
+        </section>
+        <section class="contact" id="contact">
+          <div class="heading">
+              <span>Review Area</span>
+          </div>
+          <div class="comment-box">
+            <div class="comments">
+                <span class="comment">
+                    <span class="date">4/5/23</span>
+                    <span class="name">Rahul Goyal</span>
+                    <span class="comment">The tech fest was very good. I enjoyed all the event there. I will 
+                      also come next yeat to attend the fest.</span>
+                </span>
+            </div>
+            <div class="review">
+                <form class="review_details">
+                <input type="text" placeholder="Name">
+                <textarea rows="1" placeholder="Write your review"></textarea>
+                <button type="submit">submit</button>
+              </form>
+            </div>
+        </div>
+      </section>
+        
+        <footer>
+            <span class="follow-us">
+              <span>Follow us on -</span>
+              <a href="https://www.facebook.com/profile.php?id=100091910354153" target="_blank">
+                <span class="facebook icon"></span>
+              </a>
+              <a href="https://www.instagram.com/technozarre_2k23/" target="_blank">
+                <span class="instagram icon"></span>
+              </a>
+              <a href="https://twitter.com/technozarre2k23?t=gpXzD5MNQ8i_8tNQdUUI4A&s=09" target="_blank">
+                <span class="twitter icon"></span>
+              </a>
+            </span>
+            <span class="company-info" ><a href="#" id="linkk">TECHNOZAARE - TIT&amp;S BHIWANI</a></span>
+            <style>
+              #linkk {
+                text-decoration: none;
+                color: white;
+              }
+            </style>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+    <script src="/js/contact_us.js"></script>
+    <script src="/js/review.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/events.js"></script>
+    <script>
+      VANTA.FOG({
+        el: "#tiles",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0x0,
+        midtoneColor: 0x5a00ff,
+        lowlightColor: 0xff0096,
+        baseColor: 0x0,
+        blurFactor: 0.79,
+        speed: 0.40,
+        zoom: 0.70
+      })
+    </script>
+    <script>
+      var navbar = document.getElementById("navbar");
+      var offset = navbar.offsetTop;
+
+      window.onscroll = _ => {
+        if (window.pageYOffset >= offset) {
+            navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
+</body>
+</html>

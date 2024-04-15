@@ -1,0 +1,114 @@
+body{
+    overflow: hidden;
+}
+
+.backgrounds {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: #051015;
+}
+
+.backgrounds .landing-background {
+    background: url('../assets/backgrounds/Group\ 117.png');
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* this is background image */
+.backgrounds .landing-background .background-ele {
+    width: 80%;
+    position: absolute;
+    top: 37.5%;
+    left: 10%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.backgrounds .landing-background .background-ele2 {
+    position: absolute;
+    z-index: 2;
+    top: 65%;
+    left: -100%;
+    width: 300vw;
+    height: 450vw;
+    border-radius: 50%;
+    overflow: hidden;
+    /* box-shadow: 0 0 100px 20px #cccccc; */
+}
+
+.backgrounds .landing-background .background-ele3 {
+    position: absolute;
+    z-index: 3;
+    top: 65%;
+    left: -100%;
+    width: 300vw;
+    height: 450vw;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 100px 50px #eeeeee, 0 0 100px 20px #eeeeee;
+}
+
+.backgrounds .landing-background .background-ele4 {
+    position: absolute;
+    z-index: 4;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    box-shadow: inset 0px -200px 100px -65px #151515;
+}
+
+.backgrounds .grid-background {
+    width: 100%;
+    height: 100%;
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, #333333 1px, transparent 1px), linear-gradient(to bottom, #333333 1px, transparent 1px);
+}
+
+@media (max-width: 600px) {
+    .backgrounds .landing-background {
+        background: url('../assets/backgrounds/mobile-back.png') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .backgrounds .landing-background .background-ele {
+        width: 200%;
+        left: -52%;
+        top: 50%;
+    }
+
+    .backgrounds .landing-background .background-ele2 {
+        top: 75%;
+        width: 200vw;
+        height: 200vw;
+        left: -50%;
+    }
+
+    .backgrounds .landing-background .background-ele2 img {
+        transform: translateX(50%);
+        animation: none;
+        height: 25vh;
+    }
+
+    .backgrounds .landing-background .background-ele3 {
+        top: 75%;
+        width: 200vw;
+        height: 200vw;
+        left: -50%;
+    }
+}
+
+.background-ele {
+    /* animation: moveAstro 30s linear infinite; */
+    animation-delay: 3s;
+}

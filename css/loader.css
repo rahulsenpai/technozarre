@@ -1,0 +1,213 @@
+#loader {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+    font-size: 100%;
+    background: #191a1a;
+    transition: opacity 1.5s ease-out;
+}
+
+#loader .logo-container .logo img {
+  width: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.word {
+    font-family: "Bebas Neue";
+    font-size: 53px;
+    color: #DEDAD8;
+    letter-spacing: 26.5px;
+    text-align: center;
+    bottom: 0;
+    color: #fff;
+    left: 0;
+    line-height: 2.5em;
+    margin-top: 65vh;
+    right: 0;
+    position: absolute;
+    text-shadow: 0 0 10px rgba(50, 255, 50, 0.5), 0 0 5px rgba(100, 255, 100, 0.5);
+    top: 0
+}
+
+.word span {
+    display: inline-block;
+    transform: translateX(100%) scale(0.9);
+    transition: transform 500ms;
+}
+
+.word .done {
+    color: white;
+    transform: translateX(0) scale(1);
+}
+
+.overlay {
+    background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%);
+    background-size: 1000px 2px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.logo-container {
+    width: 100%;
+    height: 80vh;
+    font-size: 100%;
+    background: #191a1a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    /*width: 250px;*/
+    /*height: 250px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.typewriter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1px;
+    margin-left: 70px;
+}
+
+#parent {
+    height: 44.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#child::after {
+    white-space: nowrap;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.40rem;
+    color: rgb(240, 219, 245);
+    content: "TECHNOZARRE'23";
+    transform: translate(7px);  
+}
+
+#border {
+    border-bottom: solid 3px rgba(0, 255, 0, .75);
+    position: absolute;
+    right: -7px;
+    width: 20px;
+}
+
+/* Animation */
+
+#parent {
+    animation: animated-text 7s steps(40, end) infinite normal both
+}
+
+#child::after {
+    animation: change-text 7s steps(40, end) infinite normal both
+}
+
+#border {
+    animation: animated-cursor 800ms steps(40, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    0%, 20%, 55%, 90%, 100% {
+        width: 0;
+    }
+    30%, 45% {
+        width: 130px;
+    }
+    65%, 80% {
+        width: 245px;
+    }
+}
+
+@keyframes animated-text-phone {
+    0%, 20%, 55%, 90%, 100% {
+        width: 0;
+    }
+    30%, 45% {
+        width: 95px;
+    }
+    65%, 80% {
+        width: 160.5px;
+    }
+}
+
+/* change text */
+
+@keyframes change-text {
+    0%, 50%, 100% {
+        content: "TIT&S'23";
+    }
+    60%, 80% {
+        content: "4th - 5th May";
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-bottom-color: #8988d1;
+    }
+    to {
+        border-bottom-color: transparent;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 320px;
+    }
+    #child::after {
+        font-size: 1.5rem;
+    }
+    #parent {
+        animation: animated-text-phone 5s steps(0, end) infinite normal both
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .first {
+        top: 6%;
+    }
+    .second {
+        top: 6%;
+    }
+    .word {
+        font-family: "Bebas Neue";
+        font-size: 53px;
+        color: #DEDAD8;
+        letter-spacing: 26.5px;
+        text-align: center;
+        bottom: 0;
+        color: #fff;
+        left: 0;
+        line-height: 2.5em;
+        margin-top: 65vh;
+        right: 0;
+        position: absolute;
+        text-shadow: 0 0 10px rgba(50, 255, 50, 0.5), 0 0 5px rgba(100, 255, 100, 0.5);
+        top: 0
+
+    }
+    .logo-container {
+        height: 75vh;
+    }
+}

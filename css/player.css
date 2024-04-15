@@ -1,0 +1,98 @@
+#videos .body {
+    display: flex;
+    
+}
+
+.slideshow-container {
+  max-width: 1400px;
+  position: relative;
+  margin: 2rem auto;
+}
+
+.Containers {
+  display: none;
+}
+
+.Back, .forward {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 2.25rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: #8bcfb1;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.4s ease;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 1rem;
+}
+
+.forward {
+  right: 1rem;
+  left: auto;
+}
+
+.Back:hover, .forward:hover {
+  background-color: rgba(35,38,39,0.8);
+  color: #8988d1;
+}
+
+.Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+.carousel-video {
+    width: 100%;
+}

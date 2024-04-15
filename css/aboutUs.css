@@ -1,0 +1,85 @@
+.aboutUs {
+  width: 100%;
+  padding: 128px 5% 16px 5%;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutUs .heading {
+    text-align: center;
+    width: 100%;
+    color: #fafafa;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    font-family: 'Teko Medium', serif;
+}
+
+.aboutUs .heading span {
+  padding: 0 1rem;
+}
+
+.aboutUs .body {
+  width: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+  color: #fafafa;
+  font: 1.25rem 'Dongle';
+  letter-spacing: 0.2rem;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'Teko Medium';
+  src: url(../assets/fonts/teko/Teko-Medium.ttf);
+}
+
+@media (max-width: 600px) {
+  .aboutUs {
+    padding: 64px 5% 16px 5%;
+  }
+  
+  .aboutUs .heading {
+      font-size: 2.2rem;
+      letter-spacing: 0.5rem;
+  }
+  
+  .aboutUs .heading span {
+    padding: 0 0.75rem;
+  }
+  
+  .aboutUs .body {
+    width: 100%;
+    padding: 40px 5%;
+    padding-bottom: 20px;
+    font: 1rem 'Dongle';
+    letter-spacing: 0.1rem;
+    text-align: justified !important;
+  }
+  
+  .aboutUs .body .ele-1 {
+    top: 20px;
+    left: -5px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .aboutUs .body .ele-2 {
+    width: 2px;
+    height: 40px;
+  }
+  
+  .aboutUs .body .ele-3 {
+    width: 40px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 350px) {
+  .aboutUs .body {
+    font-size: 1rem;
+  }
+}
